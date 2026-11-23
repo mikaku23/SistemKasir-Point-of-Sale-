@@ -106,9 +106,9 @@ CREATE TABLE IF NOT EXISTS stock_movements (
     CONSTRAINT fk_stock_movements_user
         FOREIGN KEY (user_id) REFERENCES users (id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT fk_stock_movements_transaction
-        FOREIGN KEY (transaction_id) REFERENCES transactions (id)
-        ON UPDATE CASCADE ON DELETE RESTRICT,
+CONSTRAINT fk_stock_movements_transaction
+    FOREIGN KEY (transaction_id) REFERENCES transactions (id)
+    ON UPDATE RESTRICT ON DELETE RESTRICT,
     CONSTRAINT chk_stock_movements_quantity CHECK (quantity > 0),
     CONSTRAINT chk_stock_movements_sale_transaction CHECK (
         (movement_type = 'SALE' AND transaction_id IS NOT NULL)
