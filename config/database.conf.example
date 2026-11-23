@@ -1,5 +1,11 @@
-DB_HOST="localhost"
-DB_PORT="3306"
-DB_NAME="mini_pos"
-DB_USER="mini_pos_user"
-DB_PASSWORD="change_this_password"
+# MySQL client option file format.
+# Copy this file to config/database.conf and replace placeholders.
+# Protect the real file: chmod 600 config/database.conf
+
+[client]
+host=localhost
+port=3306
+user=mini_pos_app
+password=CHANGE_THIS_PASSWORD
+database=mini_pos
+default-character-set=utf8mb4
