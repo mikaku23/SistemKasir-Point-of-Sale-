@@ -1,0 +1,18 @@
+# Database credentials
+config/database.conf
+
+# Session
+storage/sessions/*
+!storage/sessions/.gitkeep
+
+# Temporary
+*.tmp
+*.log
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

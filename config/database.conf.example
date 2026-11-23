@@ -1,0 +1,5 @@
+DB_HOST="localhost"
+DB_PORT="3306"
+DB_NAME="mini_pos"
+DB_USER="mini_pos_user"
+DB_PASSWORD="change_this_password"
