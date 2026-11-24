@@ -1,18 +1,17 @@
-# Database credentials
+# Local database credentials (NEVER commit)
 config/database.conf
 
-# Session
+# Web sessions and runtime data
 storage/sessions/*
 !storage/sessions/.gitkeep
 
-# Temporary
-*.tmp
+# Logs and temporary files
 *.log
+*.tmp
+*.swp
 
-# Editor
+# IDE / OS
 .vscode/
 .idea/
-
-# OS
 .DS_Store
 Thumbs.db

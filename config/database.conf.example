@@ -1,6 +1,8 @@
-# MySQL client option file format.
-# Copy this file to config/database.conf and replace placeholders.
-# Protect the real file: chmod 600 config/database.conf
+# MINI POS local database connection.
+# Copy this file to config/database.conf and fill in the local credentials.
+# Ubuntu MariaDB: commonly host=localhost.
+# Windows + Laragon + Git Bash: commonly host=127.0.0.1.
+# Never commit config/database.conf; it is excluded by .gitignore.
 
 [client]
 host=localhost

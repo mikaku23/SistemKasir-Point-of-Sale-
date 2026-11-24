@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login — MINI POS</title><link rel="stylesheet" href="/assets/css/style.css"><script defer src="/assets/js/api.js"></script></head>
+<body data-page="login" class="login-page"><main class="login-card"><div class="brand-mark">MP</div><p class="eyebrow">POINT OF SALE MANAGEMENT</p><h1>MINI POS</h1><p class="muted">Masuk menggunakan akun Admin.</p>
+<form id="login-form" class="stack"><label>Username<input name="username" autocomplete="username" required></label><label>Password<input name="password" type="password" autocomplete="current-password" required></label><button class="button button-primary" type="submit">Masuk</button></form><p id="login-message" class="form-message" role="status"></p></main>
+<script>
+document.querySelector('#login-form').addEventListener('submit', async event => { event.preventDefault(); const form=event.currentTarget; const message=document.querySelector('#login-message'); const body=Object.fromEntries(new FormData(form)); message.textContent='Memeriksa akun...'; try { await window.MINIPOS_API.apiRequest('auth.login',{method:'POST',body,csrf:false}); location.href='/dashboard.html'; } catch(error) { message.textContent=error.message; } });
+</script></body></html>
